@@ -1,7 +1,6 @@
-package DogObject;
+package dog;
 
 import java.util.ArrayList;
-
 
 public class Dog {
 	String name = "";
@@ -17,7 +16,6 @@ public class Dog {
 		age = ag;
 	}
 	public Dog (){
-		
 	}
 
 	public String getName() {
@@ -62,7 +60,7 @@ public class Dog {
 		else if (size.equalsIgnoreCase("medium"))
 			dogYears = getAge() * 7;
 		else
-		dogYears = getAge() * 8;
+			dogYears = getAge() * 8;
 		return dogYears;
 	}
 }

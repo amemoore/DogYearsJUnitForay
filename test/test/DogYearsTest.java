@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import DogObject.Dog;
+import dog.Dog;
 
 public class DogYearsTest {
 
@@ -15,20 +15,21 @@ public class DogYearsTest {
 	int totalLongNames;
 	int totalDogs;
 	
+	//Testing stringbuilder name length and counters in the for loop.
 	@Test
 	public void testDogName() {
 		testerDog = new ArrayList<>();
 		testerDog.add(new Dog("Harry", 30, 4));
+		testerDog.add(new Dog("Delila", 33, 2));
 		StringBuilder dogName = new StringBuilder("Harry");
-		nameLength = dogName.length();
-		assertEquals(nameLength, 5);
+		assertEquals(dogName.length(), 5);
 		
-		for (@SuppressWarnings("unused") Dog d : testerDog){	
+		for (int i=0; i<testerDog.size(); i++){	
 			if (nameLength > 4)
 				totalLongNames ++;
 			totalDogs ++ ;
 		}
-			assertEquals(totalLongNames, 1);
-			assertEquals(totalDogs, 1);
+			assertEquals(totalLongNames, 2);
+			assertEquals(totalDogs, 2);
 	}
-	}
+}

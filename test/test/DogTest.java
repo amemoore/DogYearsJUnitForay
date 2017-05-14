@@ -1,20 +1,20 @@
-package Test;
+package test;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
 import org.junit.Test;
 
-import DogObject.Dog;
+import dog.Dog;
 
 public class DogTest {
-
+	ArrayList<Dog> dogs;
+	
 	@Test
 	public void testDogCreation() {
-		ArrayList<Dog> dogs = new ArrayList<>();
+		dogs = new ArrayList<>();
 		dogs.add(new Dog("Rufus",49, 3));
 		for (Dog d : dogs){
-			
 			assertNotNull(dogs);
 			assertEquals(d.getName(), "Rufus");
 			assertEquals(d.getWeight(), 49);
@@ -23,7 +23,7 @@ public class DogTest {
 	}
 	@Test
 	public void testSize() {
-		ArrayList<Dog> dogs = new ArrayList<>();
+		dogs = new ArrayList<>();
 		dogs.add(new Dog("Rufus",49, 3));
 		for (Dog d : dogs){
 				assertEquals(d.getSize(), "medium");
@@ -31,7 +31,7 @@ public class DogTest {
 	}
 	@Test
 	public void testDogYears() {
-		ArrayList<Dog> dogs = new ArrayList<>();
+		dogs = new ArrayList<>();
 		dogs.add(new Dog("Rufus",49, 3));
 		for (Dog d : dogs){
 			assertEquals(d.getAge(), 3);
